@@ -4,6 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Pokemon.ttf">
+            <string>PokemonSolidNormal</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -22,15 +27,25 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plv-Lb-gcg">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDN-vL-Nyj">
+                                        <rect key="frame" x="239" y="8" width="123" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="6fF-N4-gOE"/>
+                                            <constraint firstAttribute="width" constant="123" id="vnF-Jn-0Mf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="25"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.093693252199102295" blue="0.17209525166261541" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="yDN-vL-Nyj" firstAttribute="centerX" secondItem="plv-Lb-gcg" secondAttribute="centerX" id="9L2-GH-O0c"/>
+                                    <constraint firstItem="yDN-vL-Nyj" firstAttribute="centerY" secondItem="plv-Lb-gcg" secondAttribute="centerY" id="EaC-YD-Cjm"/>
                                     <constraint firstAttribute="height" constant="65" id="ZyW-zR-2Vh"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="hA4-Y1-Tfh">
-                                <rect key="frame" x="0.0" y="65" width="600" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LdK-VY-516">
                                 <rect key="frame" x="29" y="132" width="543" height="448"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -111,6 +126,10 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" placeholder="Search for Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="hA4-Y1-Tfh">
+                                <rect key="frame" x="0.0" y="65" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -147,12 +166,77 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="SearchPoke" destination="hA4-Y1-Tfh" id="Mbj-Rc-hfj"/>
                         <outlet property="collection" destination="LdK-VY-516" id="4Fl-Hm-uKN"/>
+                        <segue destination="7jn-pc-MPM" kind="show" identifier="PokemonDetailVC" id="sNQ-cu-mXL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="293"/>
+            <point key="canvasLocation" x="127" y="293"/>
+        </scene>
+        <!--Pokemon DetailVC-->
+        <scene sceneID="n1Y-5m-g7s">
+            <objects>
+                <viewController id="7jn-pc-MPM" customClass="PokemonDetailVC" customModule="pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0FC-55-PDe"/>
+                        <viewControllerLayoutGuide type="bottom" id="HKG-vm-OuX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TpS-8N-3x6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrB-eB-j14">
+                                <rect key="frame" x="185" y="265" width="222" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="3Rx-1x-sS0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="222" id="4Wt-jn-G6O"/>
+                                    <constraint firstAttribute="height" constant="70" id="5VK-do-EY8"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="6ed-N8-vdh"/>
+                                    <constraint firstAttribute="width" constant="111" id="DSS-ca-q9b"/>
+                                    <constraint firstAttribute="width" constant="222" id="WXF-jr-sNK"/>
+                                    <constraint firstAttribute="height" constant="70" id="ZwS-ig-Vyc"/>
+                                    <constraint firstAttribute="height" constant="21" id="yiX-9I-zvx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3Rx-1x-sS0"/>
+                                        <exclude reference="4Wt-jn-G6O"/>
+                                        <exclude reference="5VK-do-EY8"/>
+                                        <exclude reference="6ed-N8-vdh"/>
+                                        <exclude reference="DSS-ca-q9b"/>
+                                        <exclude reference="yiX-9I-zvx"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.49133354759019043" green="1" blue="0.23842146395798214" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="DrB-eB-j14" secondAttribute="trailing" constant="259" id="48v-6n-Xhd"/>
+                            <constraint firstItem="DrB-eB-j14" firstAttribute="leading" secondItem="TpS-8N-3x6" secondAttribute="leadingMargin" constant="259" id="GdP-ut-6wM"/>
+                            <constraint firstItem="DrB-eB-j14" firstAttribute="top" secondItem="0FC-55-PDe" secondAttribute="bottom" constant="28" id="JcI-O8-kzq"/>
+                            <constraint firstItem="DrB-eB-j14" firstAttribute="centerY" secondItem="TpS-8N-3x6" secondAttribute="centerY" id="gqL-9c-bPt"/>
+                            <constraint firstItem="DrB-eB-j14" firstAttribute="centerX" secondItem="TpS-8N-3x6" secondAttribute="centerX" id="s09-oH-rkj"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="48v-6n-Xhd"/>
+                                <exclude reference="GdP-ut-6wM"/>
+                                <exclude reference="JcI-O8-kzq"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="PokeName" destination="DrB-eB-j14" id="Xbk-ij-b4I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X7m-As-ATG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="941" y="305"/>
         </scene>
     </scenes>
     <resources>

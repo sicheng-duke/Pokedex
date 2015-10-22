@@ -22,9 +22,11 @@ class PokemonDetailVC: UIViewController {
     @IBOutlet weak var weightLbl: UILabel!
     @IBOutlet weak var attackLbl: UILabel!
     @IBOutlet weak var evilLbl: UILabel!
+    @IBOutlet weak var Current: UIImageView!
+    @IBOutlet weak var next: UIImageView!
     
     
-    
+
     @IBAction func backButtonPress(sender: AnyObject) {
         
         dismissViewControllerAnimated(true, completion: nil)
@@ -37,12 +39,47 @@ class PokemonDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         PokeName.text = pokemon.name.capitalizedString
-        mainImage.image = UIImage(named:"\(pokemon.pokedexId)")
+        let img = UIImage(named:"\(pokemon.pokedexId)")
+        mainImage.image = img
+        Current.image = img
+
         
         pokemon.downloadPokemonDetails { () -> () in
             //be called after download is done
-            
+            print("Did we get here")
+            self.updateUI()
         }
+        
+    }
+    
+    func updateUI(){
+        
+            Description.text = pokemon.description
+            typeLbl.text = pokemon.type
+            defenseLbl.text = pokemon.defense
+            heightLbl.text = pokemon.height
+            idLbl.text = "\(pokemon.pokedexId)"
+            weightLbl.text = pokemon.weight
+            attackLbl.text = pokemon.attack
+        
+            if pokemon.nextEvolutionId == "" {
+                evilLbl.text = "No Evolutions"
+                next.hidden = true
+                
+            }else{
+                next.hidden = false
+                next.image = UIImage(named: pokemon.nextEvolutionId)
+                var str = "Next Evolution: \(pokemon.nextEvolution)"
+                if pokemon.nextEvolutionLvl != "" {
+                    str += " - LVL \(pokemon.nextEvolutionLvl)"
+                    evilLbl.text = str
+                }else{
+                    evilLbl.text = str
+                }
+                
+            }
+        
+        
         
     }
 }

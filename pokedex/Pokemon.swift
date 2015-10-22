@@ -36,42 +36,77 @@ class Pokemon{
     }
     
     var description: String{
+        if _description == nil{
+            _description = ""
+        }
         return _description
     }
     
     var type: String{
+        if _type == nil{
+            _type = nil
+        }
         return _type
     }
     
     var defense: String{
+        if _defense == nil{
+            _defense = ""
+        }
         return _defense
     }
     
     var height: String{
+        if _height == nil{
+            _height = ""
+        }
         return _height
     }
     
     var weight: String{
+        if _weight == nil{
+            _weight = ""
+        }
         return _weight
     }
     
     var attack: String{
+        if _attack == nil{
+            _attack = ""
+        }
         return _attack
     }
     
     var nextEvolution: String{
+        
+        if _nextEvolution == nil{
+            _nextEvolution = ""
+        }
         return _nextEvolution
+        
+
     }
     
     var nextEvolutionId: String{
+        if _nextEvolutionId == nil{
+            _nextEvolutionId = ""
+        }
         return _nextEvolutionId
     }
     
     var nextEvolutionLvl: String{
-        return _nextEvolutionLvl
+            if _nextEvolutionLvl == nil {
+                _nextEvolutionLvl = ""
+            }
+            return _nextEvolutionLvl
+        
+        
     }
     
     var pokemonUrl: String{
+        if _pokemonUrl == nil{
+            _pokemonUrl = ""
+        }
         return _pokemonUrl
     }
     
@@ -155,9 +190,12 @@ class Pokemon{
                                     
                                 if let description  = descDict["description"] as? String{
                                         self._description = description
+                                    
                                         //print(self._description)
                                 }
                             }
+                          //call completed after done
+                          completed()
                         }
                     }
                         

@@ -124,8 +124,10 @@ class Pokemon{
     //download information through API
     func downloadPokemonDetails(completed: DownloadComplete){
         let url = NSURL(string: _pokemonUrl)!
-        Alamofire.request(.GET, url).responseJSON{
+        
+            Alamofire.request(.GET, url).responseJSON{
             response in let result = response.result
+            print(result.value)
             //convert JSON to dictionary
             if let dict = result.value as? Dictionary<String, AnyObject>{
                 

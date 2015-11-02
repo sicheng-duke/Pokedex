@@ -21,7 +21,6 @@
 		5AFED72C1BD7001F00B991F8 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFED72B1BD7001F00B991F8 /* PokeCell.swift */; settings = {ASSET_TAGS = (); }; };
 		5AFED72E1BD70CFD00B991F8 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFED72D1BD70CFD00B991F8 /* csv.swift */; settings = {ASSET_TAGS = (); }; };
 		5AFED7331BD713E000B991F8 /* Pokemon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5AFED7321BD713E000B991F8 /* Pokemon.ttf */; settings = {ASSET_TAGS = (); }; };
-		5AFED7371BD718F400B991F8 /* mu.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AFED7361BD718F400B991F8 /* mu.png */; settings = {ASSET_TAGS = (); }; };
 		D229A862B889165D21F22826 /* Pods_pokedex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0093AB04D6C61B83EFDAF228 /* Pods_pokedex.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +65,6 @@
 		5AFED72B1BD7001F00B991F8 /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 		5AFED72D1BD70CFD00B991F8 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = csv.swift; path = ../csv.swift; sourceTree = "<group>"; };
 		5AFED7321BD713E000B991F8 /* Pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pokemon.ttf; sourceTree = "<group>"; };
-		5AFED7361BD718F400B991F8 /* mu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mu.png; sourceTree = "<group>"; };
 		6FB8CF44D39183427CD43DF3 /* Pods-pokedex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pokedex.release.xcconfig"; path = "Pods/Target Support Files/Pods-pokedex/Pods-pokedex.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				5AFED7321BD713E000B991F8 /* Pokemon.ttf */,
-				5AFED7361BD718F400B991F8 /* mu.png */,
 				5AFED7231BD6F62100B991F8 /* pokemon.csv */,
 			);
 			name = Resources;
@@ -320,7 +317,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AFED7371BD718F400B991F8 /* mu.png in Resources */,
 				5AFED7001BD6F1C000B991F8 /* LaunchScreen.storyboard in Resources */,
 				5AFED7331BD713E000B991F8 /* Pokemon.ttf in Resources */,
 				5AFED6FD1BD6F1C000B991F8 /* Assets.xcassets in Resources */,

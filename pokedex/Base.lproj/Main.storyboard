@@ -285,7 +285,7 @@
                                         </segments>
                                     </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFm-tH-c8f">
-                                        <rect key="frame" x="0.0" y="50" width="560" height="120"/>
+                                        <rect key="frame" x="0.0" y="51" width="560" height="120"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="15" translatesAutoresizingMaskIntoConstraints="NO" id="4La-D5-gmf">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -303,7 +303,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9tc-DT-eJo">
-                                        <rect key="frame" x="0.0" y="191" width="560" height="21"/>
+                                        <rect key="frame" x="0.0" y="192" width="560" height="21"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7e-99-uHw">
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="21"/>
@@ -311,7 +311,7 @@
                                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YW-6G-Ry6">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="1YW-6G-Ry6">
                                                 <rect key="frame" x="140" y="0.0" width="140" height="21"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -332,14 +332,14 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="De4-Jd-Keh">
-                                        <rect key="frame" x="0.0" y="233" width="560" height="1"/>
+                                        <rect key="frame" x="0.0" y="234" width="560" height="1"/>
                                         <color key="backgroundColor" red="0.53606376262626265" green="0.53606376262626265" blue="0.53606376262626265" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Kcn-jY-295"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Iel-uT-e1E">
-                                        <rect key="frame" x="0.0" y="255" width="560" height="20"/>
+                                        <rect key="frame" x="0.0" y="256" width="560" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9U4-nV-7VK">
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="20"/>
@@ -368,7 +368,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ePo-za-bTB">
-                                        <rect key="frame" x="0.0" y="296" width="560" height="20"/>
+                                        <rect key="frame" x="0.0" y="297" width="560" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fW-kw-VZe">
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="20"/>
